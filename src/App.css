@@ -1,0 +1,207 @@
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #2e2e2e;
+  color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Контейнер для основного контента */
+#root {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Логотип */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  border: 2px solid #f4f4f4;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 300ms, filter 300ms;
+  margin-bottom: 2rem;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+  transform: scale(1.05);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Кнопки */
+button {
+  background-color: #444;
+  color: #f4f4f4;
+  border: none;
+  padding: 1em 2em;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 300ms, transform 200ms;
+  margin: 1rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background-color: #666;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #444;
+  transform: translateY(2px);
+}
+
+/* Список студентов в виде карты */
+.student-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.student-item {
+  background-color: #444;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  transition: background-color 300ms, transform 200ms;
+  border: 1px solid #888;
+}
+
+.student-item:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
+
+/* Карточка с результатом */
+.result-card {
+  background-color: #444;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+/* Раздел с результатами */
+.result-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+
+  .logo {
+    height: 5em;
+    padding: 1em;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.8em 1.5em;
+  }
+
+  .student-item {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .result-card {
+    padding: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Стили для карты баланса */
+.balance-card {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.balance-card.none {
+  background-color: lightgray;
+  color: darkgray;
+}
+
+.balance-card.bronze {
+  background-color: #cd7f32; /* Бронзовый цвет */
+  color: white;
+}
+
+.balance-card.silver {
+  background-color: #c0c0c0; /* Серебряный цвет */
+  color: white;
+}
+
+.balance-card.gold {
+  background-color: #ffd700; /* Золотой цвет */
+  color: white;
+}
+
+.balance-card p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Стили для списка студентов */
+div {
+  cursor: pointer;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+div:hover {
+  background-color: #f0f0f0;
+}
